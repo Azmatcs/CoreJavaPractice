@@ -3,7 +3,7 @@ package NumberProgram;
 public class ArmstrongNumber {
 
 	public static void main(String[] args) {
-		int num = 371;
+		int num = 153;
 		int rem;
 		double sum = 0;
 		int temp = num;

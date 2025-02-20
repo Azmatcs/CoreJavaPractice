@@ -1,5 +1,9 @@
 package StringProgram;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,29 +11,31 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
+import java.util.UUID;
 
 public class Practice {
-
 	public static void main(String[] args) {
-		System.out.print(non("AzmAzT"));
+String s="Azmat Ali";
+char c[]=s.toCharArray();
+char re[]=new char[s.length()];
+
+int j=s.length()-1;
+for(int i=0;i<s.length();i++) {
+	if(c[i]==' ') {
+		re[i]=' ';
 	}
-
-	public static Character non(String s) {
-		char c[] = s.toCharArray();
-		for (int i = 0; i < s.length(); i++) {
-			boolean match = false;
-			for (int j = 0; j < s.length(); j++) {
-				if (i != j && c[i] == c[j]) {
-					match = true;
-					break;
-				}
-			}
-			if (match == false) {
-				return c[i];
-			}
+}
+for(int i=0;i<s.length();i++) {
+	if(c[i]!=' ') {
+		if(re[j]==' ') {
+			j--;
 		}
-		return '$';
-
+		re[j]=c[i];
+		j--;
+	}
+}
+System.out.println(re);
 	}
 }
